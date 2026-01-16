@@ -36,7 +36,9 @@ submitBtn.addEventListener('click', () => {
                 "the man who will take the 2026 world cup",
                 "el Bicho",
                 "o bicho",
-                "the red devil"
+                "the red devil",
+                "the portuguese magician",
+                "the goal machine"
             ];
 
             if (correctAnswers.includes(answer)) {
