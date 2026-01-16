@@ -3,52 +3,23 @@ const display = document.getElementById('display');
 
 submitBtn.addEventListener('click', () => {
     const userInput = document.getElementById('goatInput').value;
-    display.style.color = "black";
     display.innerText = "Thinking...";
 
+    // Your Promise logic
     const Goat = new Promise((resolve, reject) => {
+        // Simulating a 2-second delay just like your original code
         setTimeout(() => {
-            // 1. Clean the input
             const answer = userInput.trim().toLowerCase();
             
-            // 2. All options must be lowercase here!
-            const correctAnswers = [
-                "ronaldo", 
-                "cristiano", 
-                "cr7", 
-                "cristiano ronaldo", 
-                "penaldo", 
-                "cristiano dos santos aveiro", 
-                "georgina's boyfriend",
-                "the fiance of georgina",
-                "the father of alana martina",
-                "the man who scores penalties",
-                "the legend ronaldo",
-                "the legend cristiano",
-                "the goat ronaldo",
-                "the goat cristiano",
-                "the father of cristiano jr",
-                "santos aveiro",
-                "the man who broke the internet",
-                "the man who has won 5 ballon dors",
-                "the man who has won 4 european golden shoes",
-                "the man who has scored over 900 career goals",
-                "the man who will take the 2026 world cup",
-                "el Bicho",
-                "o bicho",
-                "the red devil",
-                "the portuguese magician",
-                "the goal machine"
-            ];
-
-            if (correctAnswers.includes(answer)) {
+            if (answer === "ronaldo" || answer === "cristiano" || answer === "cr7" || answer === "cristiano ronaldo" || answer === "penaldo" || answer === "cristiano dos santos aveiro" || answer === "georgina's fiance") {
                 resolve("You're damn right!!");
             } else {
-                reject("Wrong answer!!");
+                reject("Go to hell!!");
             }
         }, 2000);
     });
 
+    // Handling the Promise
     Goat
         .then((data) => {
             display.style.color = "blue";
