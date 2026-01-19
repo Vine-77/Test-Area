@@ -14,7 +14,7 @@ submitBtn.addEventListener('click', () => {
             if (answer === "ronaldo" || answer === "cristiano" || answer === "cr7" || answer === "cristiano ronaldo" || answer === "penaldo" || answer === "cristiano dos santos aveiro" || answer === "georgina's fiance") {
                 resolve("You're damn right!!");
             } else {
-                reject("Go to hell!!");
+                reject("You are so wrong!");
             }
         }, 2000);
     });
